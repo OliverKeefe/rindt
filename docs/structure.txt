@@ -1,0 +1,23 @@
+Rindt
+     env
+     src
+        main.py
+        -> telmetry-ninja -> #Import from TelmetryNinja Repo.
+        database.py 
+        telemetry.py
+        logconfig.py
+        drive.py
+        vision.py
+        arguments.py
+        reinforcements.py
+        models
+            driving_model.py
+            pathfinding_mode.py
+            vision_model.py    
+     docs
+         design
+         documentation
+     models
+        R-AOWRA-1_0.hdf5
+        R-VOD-1_0.hdf5
+     config
