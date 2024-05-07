@@ -10,7 +10,6 @@ public class NavbarTop extends Navbar{
         this.scale = scale;
         JMenuBar menuBarTop = new JMenuBar();
         menuBarTop.setPreferredSize(new Dimension((int) scale[0], (int) scale[1]));
-        menuBarTop.setSize(new Dimension((int) scale[0], (int) scale[1]));
 
         JMenu fileMenu = new JMenu("File");
         menuBarTop.add(fileMenu);
