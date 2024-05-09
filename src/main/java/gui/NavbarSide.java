@@ -4,6 +4,7 @@ import javax.swing.*;
 
 public class NavbarSide extends Navbar {
     public NavbarSide() {
-        JMenuBar menuBarSide = new JMenuBar();
+        JPanel navbarSide = new JPanel();
+
     }
 }

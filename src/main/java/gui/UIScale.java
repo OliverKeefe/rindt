@@ -4,24 +4,29 @@ import java.awt.*;
 
 public class UIScale {
     public static double scaleFactor;
+    private double[] baseScreenResolution = {2560, 1440};
+    private double[] screenResolution;
 
     public UIScale() {
+        // Calculate the area ratio of the screen resolutions.
+        this.screenResolution = baseScreenResolution;
         // Get the screen resolution of user's display/s.
+
+
+    }
+
+    public void setUIScale() {
         GraphicsDevice graphicsDevice = GraphicsEnvironment.getLocalGraphicsEnvironment().getDefaultScreenDevice();
         int screenWidth = graphicsDevice.getDisplayMode().getWidth();
         int screenHeight = graphicsDevice.getDisplayMode().getHeight();
 
-        // Define base screen resolution (in this case 1920x1080).
-        int baseWidth = 1920;
-        int baseHeight = 1080;
+        int baseScreenWidth = 2560;
+        int baseScreenHeight = 1440;
 
-        // Calculate the area ratio of the screen resolutions.
-        this.setScaleFactor(((double) screenWidth * screenHeight) / (baseWidth * baseHeight));
-    }
+        if (screenWidth > baseScreenWidth) {
+            System.setProperty("sun.java2d.uiScale", "2");
+        }
 
-    public double[] getUIScale(int scaleFactor) {
-        double adjustedScaleFactor = this.getScaleFactor() * scaleFactor;
-        return new double[] {adjustedScaleFactor, adjustedScaleFactor};
     }
 
     public double getScaleFactor() {
